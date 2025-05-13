@@ -1,2 +1,27 @@
 @import "tailwindcss";
-@import "tailwindcss/typography";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@layer theme {
+    :root {
+        --default-font-family: 'roboto', sans-serif bold;
+    }
+}
+
+@layer base {
+    h1, h2, h3, h4, h5, h6{
+        font-family: var(--default-font-family);
+    }
+}
+
+@layer components {
+    .box {
+        @apply bg-gray-300 text-white shadow-md rounded-md;
+
+    }
+}
+
+@layer utilities {
+    .aspect-portrait{
+        aspect-ratio: 1/2;
+    }
+
+}
